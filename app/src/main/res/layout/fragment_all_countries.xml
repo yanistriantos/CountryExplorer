@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_all_countries.xml
+    The screen that shows the full, searchable list of all countries.
+    Contains a search box at the top and a RecyclerView filling the rest.
+    A loading spinner sits in the centre while data is being fetched.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Search box. Typing here filters the list as the user types. -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search country by name"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <!-- A container so we can centre the spinner on top of the list area. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- The scrolling list of country rows. -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Shown in the centre while countries are loading, hidden afterwards. -->
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</LinearLayout>

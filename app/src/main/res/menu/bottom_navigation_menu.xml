@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The two tabs at the bottom. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationAllCountries"
+        android:title="All Countries" />
+
+    <item
+        android:id="@+id/navigationFavourites"
+        android:title="Favourites" />
+
+</menu>
